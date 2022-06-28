@@ -40,7 +40,7 @@ export default class EditStock extends Component {
   }
 
   onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const stockObject = {
       name : this.state.name,

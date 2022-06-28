@@ -26,7 +26,7 @@ export default class CreateStock extends Component {
     }
 
     onSubmit = (e) => {
-      e.preventDefault();
+      // e.preventDefault();
 
       const stockObject = {
         name : this.state.name,
@@ -46,12 +46,13 @@ export default class CreateStock extends Component {
         price : '',
         quantity: '',
       })
+      this.props.history.push('/stock-list')
     }
 
   render() {
     return (
       <div className='form-wrapper mt-5' >
-        <h1>Create Stock</h1>
+        <h1>ADD Stock</h1>
         <Form onSubmit={this.onSubmit}>
             <Form.Group controlId = "Name">
                 <Form.Label>Product Name:</Form.Label>
@@ -67,6 +68,7 @@ export default class CreateStock extends Component {
                 <Form.Label>Quantity:</Form.Label>
                 <Form.Control type='number'value={this.state.quantity} onChange = {this.onChangeStockQuantity} />
             </Form.Group>
+
           <div className='mt-3' >
            <Button variant="success" size="lg" block = "block" type ="submit" >
                 Create Stock 

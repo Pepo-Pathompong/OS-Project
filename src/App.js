@@ -30,7 +30,7 @@ function App() {
                   <Nav className= "justify-content-end" >
                       <Nav>
                         <Link to = {"/create-stock"} class = "nav-link">
-                            Create Stock
+                            Add Stock
                         </Link>
                       </Nav>
 
